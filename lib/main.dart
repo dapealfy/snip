@@ -119,6 +119,7 @@ class _MainpageState extends State<Mainpage> {
               fit: BoxFit.fill),
         ),
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             Container(
               height: 10,
@@ -140,7 +141,7 @@ class _MainpageState extends State<Mainpage> {
                         viewportFraction: 0.8,
                         initialPage: 0,
                       ),
-                      physics: PageScrollPhysics(),
+                      physics: BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         WhatsTrending(
@@ -201,6 +202,7 @@ class _MainpageState extends State<Mainpage> {
                 Container(
                   height: 115.0,
                   child: ListView(
+                    physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       Menu(
